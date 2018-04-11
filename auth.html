@@ -62,6 +62,7 @@
 
 				function assessAuth(){
 					$("#warn").text("Oh, what was that?...");
+					$("#warn").text(getReg01());
 					isAuthing = true;
 					authKey = $("#passBox").val()
 					var x = setTimeout(doAuth, 1500);
