@@ -73,7 +73,7 @@
 				}
 
 				function auth() {
-					if (Sha1.hash(authKey) == /.netlify/functions/{getReg01}()) {
+					if (Sha1.hash(authKey) == getReg01()) {
 						$("#warn").text("Right on!");
 					} else {
 						$("#warn").text("Nope that's not it, mon.");
