@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Login</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/auth/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/auth/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/auth/ie8.css" /><![endif]-->
+		<noscript><link rel="stylesheet" href="assets/css/auth/noscript.css" /></noscript>
+	</head>
+	<body class="is-loading">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main">
+						<header>
+							<h1>The Guardian Asks</h1>
+							<span class="avatar"><img src="images/avatar.jpg" alt="" /></span>
+							<h2>And who you be?</h2>
+							<p>None may pass, who do</br>not know what the word to be:</p>
+						</header>
+
+						<div class="field">
+							<input type="password" name="pass" id="passBox" placeholder="Word" />
+							<p style="color:tomato" id="warn"></p>
+							<a class="button" id="passBut">Lemme in!</a>
+						</div>
+			</div>
+
+		<!-- Scripts -->
+			<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
+			<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+			<script type="text/javascript" src="https://cdn.rawgit.com/chrisveness/crypto/master/sha1.js"></script>
+			<script>
+				if ('addEventListener' in window) {
+					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+				}
+			</script>
+			<script>
+				var isAuthing = false;
+				var authKey;
+
+				$("#passBut").on("click", function() {
+					if (isAuthing==false) {
+						assessAuth();
+					}
+					$("#passBox").focus();
+				});
+
+				$("#passBox").keypress(function(e) {
+					if (e.which == 13) {
+						if (isAuthing==false) {
+							assessAuth();
+						}
+					}
+				});
+
+				function assessAuth(){
+					$("#warn").text("Oh, what was that?...");
+					isAuthing = true;
+					authKey = $("#passBox").val()
+					var x = setTimeout(doAuth, 1500);
+				}
+
+				function doAuth(){
+					isAuthing = false;
+					auth();
+				}
+
+				function auth() {
+					if (Sha1.hash(authKey) == getReg()) {
+						$("#warn").text("Right on!");
+					} else {
+						$("#warn").text("Nope that's not it, mon.");
+					}
+				};
+				function getReg(){return Sha1.hash(123)};
+			</script>
+	</body>
+</html>
