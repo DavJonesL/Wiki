@@ -90,12 +90,10 @@
 </html>
 <script>
 
-window.onload = loopUpdate();
-function supports_html5_storage() {
-  try {
-    return 'localStorage' in window && window['localStorage'] !== null;
-  } catch (e) {
-    return false;
-  }
+window.onload = assessIntegrity();
+function assessIntegrity() {
+  if (supportsStorage) {
+		window.location.href = '/404.html';
+	}
 }
 </script>
