@@ -92,7 +92,7 @@
 
 window.onload = assessIntegrity();
 function assessIntegrity() {
-  if (supportsStorage) {
+  if (!supportsStorage) {
 		window.location.href = '/404.html';
 	}
 }
