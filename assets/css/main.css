@@ -1159,11 +1159,11 @@
 /* Table */
 
 	table {
-		width: 100%;
+		width: 65%;
 	}
 
 		table.default {
-			width: 100%;
+			width: 65%;
 		}
 
 			table.default tbody tr:nth-child(2n+2) {
