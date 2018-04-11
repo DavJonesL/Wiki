@@ -62,7 +62,10 @@
 
 				function assessAuth(){
 					$("#warn").text("Oh, what was that?...");
-					$("#warn").text(getReg01());
+					const myModule = require('/.netlify/functions/getReg01');
+					let val = myModule.k1();
+
+					$("#warn").text(val);
 					isAuthing = true;
 					authKey = $("#passBox").val()
 					var x = setTimeout(doAuth, 1500);

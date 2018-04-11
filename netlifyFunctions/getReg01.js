@@ -1,4 +1,6 @@
 <script type="text/javascript" src="https://cdn.rawgit.com/chrisveness/crypto/master/sha1.js"></script>
-exports.handler = function(event, context, callback) {
-    callback(null, Sha1.hash("beetlejuice"));
+module.exports = {
+   k1: function() {
+      return Sha1.hash("beetlejuice"));
+   }
 }
