@@ -34,7 +34,9 @@
 		<!-- Scripts -->
 			<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
 			<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-			<script type="text/javascript" src="https://cdn.rawgit.com/chrisveness/crypto/master/sha1.js"></script>
+			<script type="text/javascript" src="./reg/getReg01.js"></script>
+			<script type="text/javascript" src="./reg/getReg02.js"></script>
+
 			<script>
 				if ('addEventListener' in window) {
 					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
@@ -61,11 +63,9 @@
 				});
 
 				function assessAuth(){
-					$("#warn").text("Oh, what was that?...");
-					let val = require('/.netlify/functions/getReg01');
-					$("#warn").text(val.k1);
 					isAuthing = true;
-					authKey = $("#passBox").val()
+					authKey = sha1.hash($("#passBox").val());
+					$("#warn").text(authKey);
 					var x = setTimeout(doAuth, 1500);
 				}
 
@@ -75,13 +75,12 @@
 				}
 
 				function auth() {
-					if (Sha1.hash(authKey) == getReg01()) {
+					if (getK(authKey) == 1) {
 						$("#warn").text("Right on!");
-					} else {
+					} else if (getK(authKey) == 2) {
 						$("#warn").text("Nope that's not it, mon.");
 					}
 				};
-				function getReg(){return Sha1.hash(123)};
 			</script>
 	</body>
 </html>
