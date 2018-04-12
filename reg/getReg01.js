@@ -6,30 +6,30 @@ function getK(val){
   } else {
     return 0;
   }
-};
+}
 
 function validate() {
   if (!supportsStorage()) {
-		window.location.href = '/badconnection';
+		window.location.href = "/badconnection";
 		return false;
 	}
   if (document.title != "Login"){
     if (!isLogged()) {
-      window.location.href = '/auth';
+      window.location.href = "/auth";
       return false;
     }
   }
   return true;
-};
+}
 
 function authenticate(k) {
-  if (k, parseInt(localStorage.getItem("expire")))) {
+  if (validLog(k, parseInt(localStorage.getItem("expire")))) {
     return true;
   }
   //localStorage.clear();
-  window.location.href = '/auth';
+  window.location.href = "/auth";
   return false;
-};
+}
 
 function supportsStorage() {
   try {
@@ -41,14 +41,14 @@ function supportsStorage() {
 
 function isLogged(){
     return localStorage.getItem("sess") != null;
-};
+}
 
 function validLog(k,d){
   localStorage.setItem("level",Date.now()+" / "+d);
   return (getK(k) > 0 && Date.now() < d);
-};
+}
 
 function regSession(ID){
   localStorage.setItem("sess",ID);
   localStorage.setItem("expire",Date.now()+10000);
-};
+}
