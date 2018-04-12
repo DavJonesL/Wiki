@@ -17,11 +17,14 @@ function assessIntegrity() {
     if (isLogged()) {
       document.title = "Logged";
       localStorage.setItem("level","Logged");
-      }
-    if (validLog(localStorage.getItem("sess"), parseInt(localStorage.getItem("expire")))) {
-      document.title = "Valid";
-      localStorage.setItem("level","validLog");
-      return true;}
+      if (validLog(localStorage.getItem("sess"), parseInt(localStorage.getItem("expire")))) {
+        document.title = "Valid";
+        localStorage.setItem("level","validLog");
+        return true;}
+    }
+    if (parseInt(localStorage.getItem("expire")) === localStorage.getItem("expire")){
+      localStorage.setItem("level","same thing");
+    } else {localStorage.setItem("level","NOT same thing");}
     //localStorage.clear();
 
     window.location.href = '/auth';
