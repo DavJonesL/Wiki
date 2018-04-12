@@ -16,11 +16,13 @@ function assessIntegrity() {
 
   if (document.title != "Login"){
     if (!isLogged()) {
+      storage.clear();
   		window.location.href = '/auth.html';
   		return;
   	}
     document.title = "is logged";
     if (!validLog(localStorage.getItem("sess"), localStorage.getItem("expire"))) {
+      storage.clear();
       window.location.href = '/auth.html';
   		return;
     }
