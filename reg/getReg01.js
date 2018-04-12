@@ -10,7 +10,7 @@ function getK(val){
 
 function assessIntegrity() {
   if (!supportsStorage()) {
-		window.location.href = '/404';
+		window.location.href = '/badconnection';
 		return;
 	}
 

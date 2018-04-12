@@ -77,10 +77,10 @@
 					authKey = authKey.toUpperCase();
 					if (getK(authKey) == 1) {
 						$("#warn").text("Ah... I've been expecting you, mon.");
-						regSession(authKey);
+						regSession($("#passBox").val());
 					} else if (getK(authKey) == 2) {
 						$("#warn").text("Ah, I feel you mon.");
-						regSession(authKey);
+						regSession($("#passBox").val());
 					} else {
 						$("#warn").text("Nope that's not it, mon.");
 					}
