@@ -24,8 +24,8 @@ function validate() {
 
 function authenticate(k) {
   if (validLog(k, parseInt(localStorage.getItem("expire")))) {return true}
-  //localStorage.clear();
-  //window.location.href = "/auth";
+  localStorage.clear();
+  window.location.href = "/auth";
   return false;
 }
 
