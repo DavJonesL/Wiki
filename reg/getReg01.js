@@ -13,7 +13,7 @@ function assessIntegrity() {
 		window.location.href = '/badconnection';
 		return;
 	}
-
+document.title = "supports"
   if (document.title != "Login"){
     if (!isLogged()) {
       storage.clear();
@@ -21,11 +21,12 @@ function assessIntegrity() {
   		return;
   	}
     document.title = "is logged";
-    if (!validLog(localStorage.getItem("sess"), localStorage.getItem("expire"))) {
-      storage.clear();
+    if (!validLog(localStorage.getItem("sess"), parseInt(localStorage.getItem("expire")))) {
+      localStorage.clear();
       window.location.href = '/auth';
   		return;
     }
+    document.title = "valid log";
   }
 	return;
 };
@@ -43,8 +44,7 @@ function isLogged(){
 };
 
 function validLog(k,d){
-  if (getK(k) < 1 || Date.now() > parseInt(d)){return false};
-  return true;
+  return (getK(k) > 0 && Date.now() < d);
 };
 
 function regSession(ID){
