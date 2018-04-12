@@ -11,23 +11,23 @@ function getK(val){
 function assessIntegrity() {
   if (!supportsStorage()) {
 		window.location.href = '/badconnection';
-		return;
+		return false;
 	}
   if (document.title != "Login"){
-    if (!isLogged()) {
-      localStorage.clear();
-  		window.location.href = '/auth';
-  		return;
-  	}
-    document.title = "is logged";
-    if (!validLog(localStorage.getItem("sess"), parseInt(localStorage.getItem("expire")))) {
-      localStorage.clear();
-      window.location.href = '/auth';
-  		return;
-    }
-    document.title = "valid log";
+    if (isLogged()) {
+      document.title = "Logged";
+      localStorage.setItem("level","Logged");
+      return true;}
+    if (validLog(localStorage.getItem("sess"), parseInt(localStorage.getItem("expire")))) {
+      document.title = "Valid";
+      localStorage.setItem("level","validLog");
+      return true;}
+    //localStorage.clear();
+
+    window.location.href = '/auth';
+    return false;
   }
-	return;
+	return true;
 };
 
 function supportsStorage() {
