@@ -36,7 +36,6 @@
 			<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 			<script type="text/javascript" src="./reg/getReg01.js"></script>
 			<script type="text/javascript" src="./reg/getReg02.js"></script>
-			<script type="text/javascript" src="./reg/getReg03.js"></script>
 			<script>
 				if ('addEventListener' in window) {
 					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
@@ -64,7 +63,6 @@
 
 				function assessAuth(){
 					isAuthing = true;
-					authKey = $("#passBox").val();
 					$("#warn").text("Oh! Is that so...");
 					var x = setTimeout(doAuth, 1500);
 				}
@@ -79,21 +77,19 @@
 					authKey = authKey.toUpperCase();
 					if (getK(authKey) == 1) {
 						$("#warn").text("Ah... I've been expecting you, mon.");
+						regSession(authKey);
 					} else if (getK(authKey) == 2) {
 						$("#warn").text("Ah, I feel you mon.");
+						regSession(authKey);
 					} else {
 						$("#warn").text("Nope that's not it, mon.");
 					}
+
 				};
 			</script>
 	</body>
 </html>
 <script>
-
-window.onload = assessIntegrity();
-function assessIntegrity() {
-  if (!supportsStorage) {
-		window.location.href = '/404.html';
-	}
-}
+	window.onload = assessIntegrity();
+	storage.clear();
 </script>
