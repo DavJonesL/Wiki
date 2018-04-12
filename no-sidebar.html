@@ -1,7 +1,12 @@
 <script type="text/javascript" src="./reg/getReg01.js"></script>
+<script type="text/javascript" src="./reg/getReg02.js"></script>
 <script>
 	document.title = "here";
-	window.onload = assessIntegrity();
+	if (validate()) {
+		if (authenticate(sha1.hash(localStorage.getItem("sess")))) {
+			document.title = "Authenticated";
+		}
+	}
 </script>
 
 <html>

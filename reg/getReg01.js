@@ -8,26 +8,27 @@ function getK(val){
   }
 };
 
-function assessIntegrity() {
+function validate() {
   if (!supportsStorage()) {
 		window.location.href = '/badconnection';
 		return false;
 	}
   if (document.title != "Login"){
-    if (isLogged()) {
-      document.title = "Logged";
-      localStorage.setItem("level","Logged");
-      if (validLog(localStorage.getItem("sess"), parseInt(localStorage.getItem("expire")))) {
-        document.title = "Valid";
-        localStorage.setItem("level","validLog");
-        return true;}
+    if (!isLogged()) {
+      window.location.href = '/auth';
+      return false;
     }
-    //localStorage.clear();
-
-    window.location.href = '/auth';
-    return false;
   }
-	return true;
+  return true;
+};
+
+function authenticate(k) {
+  if (k, parseInt(localStorage.getItem("expire")))) {
+    return true;
+  }
+  //localStorage.clear();
+  window.location.href = '/auth';
+  return false;
 };
 
 function supportsStorage() {
