@@ -16,7 +16,7 @@ function assessIntegrity() {
 document.title = "supports"
   if (document.title != "Login"){
     if (!isLogged()) {
-      storage.clear();
+      localStorage.clear();
   		window.location.href = '/auth';
   		return;
   	}
