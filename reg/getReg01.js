@@ -17,7 +17,7 @@ function assessIntegrity() {
     if (isLogged()) {
       document.title = "Logged";
       localStorage.setItem("level","Logged");
-      return true;}
+      }
     if (validLog(localStorage.getItem("sess"), parseInt(localStorage.getItem("expire")))) {
       document.title = "Valid";
       localStorage.setItem("level","validLog");
