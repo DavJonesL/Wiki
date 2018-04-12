@@ -22,9 +22,6 @@ function assessIntegrity() {
         localStorage.setItem("level","validLog");
         return true;}
     }
-    if (parseInt(localStorage.getItem("expire")) === localStorage.getItem("expire")){
-      localStorage.setItem("level","same thing");
-    } else {localStorage.setItem("level","NOT same thing");}
     //localStorage.clear();
 
     window.location.href = '/auth';
