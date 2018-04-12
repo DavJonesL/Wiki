@@ -13,7 +13,7 @@ function assessIntegrity() {
 		window.location.href = '/404.html';
 		return;
 	}
-  
+
   if (document.title != "Login"){
     if (!isLogged()) {
   		window.location.href = '/auth.html';
@@ -41,7 +41,7 @@ function isLogged(){
 }
 
 function validLog(k,d){
-  if (getK(k) < 1 || Date.now() < d){return false};
+  if (getK(k) < 1 || Date.now() > d){return false};
   return true;
 }
 
