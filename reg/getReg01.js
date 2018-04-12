@@ -13,7 +13,6 @@ function assessIntegrity() {
 		window.location.href = '/badconnection';
 		return;
 	}
-document.title = "supports"
   if (document.title != "Login"){
     if (!isLogged()) {
       localStorage.clear();
