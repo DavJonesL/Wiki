@@ -3,7 +3,7 @@
 <script>
 	document.title = "here";
 	if (validate()) {
-		if (authenticate(sha1.hash(localStorage.getItem("sess")))) {
+		if (authenticate((sha1.hash(localStorage.getItem("sess"))).toUpperCase())) {
 			document.title = "Authenticated";
 		}
 	}

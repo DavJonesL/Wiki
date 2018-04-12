@@ -10,12 +10,12 @@ function getK(val){
 
 function validate() {
   if (!supportsStorage()) {
-		window.location.href = "/badconnection";
+		window.location.href = "./badconnection.html";
 		return false;
 	}
   if (document.title != "Login"){
     if (!isLogged()) {
-      window.location.href = "/auth";
+      window.location.href = "./auth.html";
       return false;
     }
   }
@@ -23,9 +23,7 @@ function validate() {
 }
 
 function authenticate(k) {
-  if (validLog(k, parseInt(localStorage.getItem("expire")))) {
-    return true;
-  }
+  if (validLog(k, parseInt(localStorage.getItem("expire")))) {return true}
   //localStorage.clear();
   //window.location.href = "/auth";
   return false;
@@ -37,15 +35,15 @@ function supportsStorage() {
   } catch (e) {
     return false;
   }
-};
+}
 
 function isLogged(){
     return localStorage.getItem("sess") != null;
 }
 
 function validLog(k,d){
-  localStorage.setItem("level",Date.now()+" / "+d);
-  return (getK(k) > 0 && Date.now() < d);
+  if (getK(k) > 0 && Date.now() < d) {return true}
+  return false;
 }
 
 function regSession(ID){
