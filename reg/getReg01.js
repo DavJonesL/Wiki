@@ -27,7 +27,7 @@ function authenticate(k) {
     return true;
   }
   //localStorage.clear();
-  window.location.href = "/auth";
+  //window.location.href = "/auth";
   return false;
 }
 
