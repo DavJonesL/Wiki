@@ -6,29 +6,29 @@ function getK(val){
   } else {
     return 0;
   }
-}
+};
 
 function assessIntegrity() {
   if (!supportsStorage()) {
-		window.location.href = '/404.html';
+		window.location.href = '/404';
 		return;
 	}
 
   if (document.title != "Login"){
     if (!isLogged()) {
       storage.clear();
-  		window.location.href = '/auth.html';
+  		window.location.href = '/auth';
   		return;
   	}
     document.title = "is logged";
     if (!validLog(localStorage.getItem("sess"), localStorage.getItem("expire"))) {
       storage.clear();
-      window.location.href = '/auth.html';
+      window.location.href = '/auth';
   		return;
     }
   }
 	return;
-}
+};
 
 function supportsStorage() {
   try {
@@ -36,18 +36,18 @@ function supportsStorage() {
   } catch (e) {
     return false;
   }
-}
+};
 
 function isLogged(){
     return localStorage.getItem("sess") != null;
-}
+};
 
 function validLog(k,d){
-  if (getK(k) < 1 || Date.now() > d){return false};
+  if (getK(k) < 1 || Date.now() > parseInt(d)){return false};
   return true;
-}
+};
 
 function regSession(ID){
   localStorage.setItem("sess",ID);
   localStorage.setItem("expire",Date.now()+10000);
-}
+};
