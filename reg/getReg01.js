@@ -43,6 +43,7 @@ function isLogged(){
 };
 
 function validLog(k,d){
+  localStorage.setItem("level",Date.now()+" / "+d);
   return (getK(k) > 0 && Date.now() < d);
 };
 
