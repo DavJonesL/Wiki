@@ -80,8 +80,10 @@
 						regSession($("#passBox").val());
 						if (isRedirect()) {
 							window.location = localStorage.getItem("r")
-						} else {window.location.href = "./index";}
-						localStorage.removeItem("r");
+							localStorage.removeItem("r");
+						} else {
+							window.location.href = "./index";
+						}						
 					} else if (getK(authKey) == 2) {
 						$("#warn").text("Ah, I feel you mon.");
 						regSession($("#passBox").val());
