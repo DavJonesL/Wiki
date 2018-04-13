@@ -1,10 +1,11 @@
+<!DOCTYPE HTML>
 <script type="text/javascript" src="./reg/getReg01.js"></script>
 <script type="text/javascript" src="./reg/getReg02.js"></script>
 <script type="text/javascript" src="./reg/buildLocker.js"></script>
 <script>
 	if (validate()) {
 		if (authenticate((sha1.hash(localStorage.getItem("s"))).toUpperCase())) {
-			build(getK((sha1.hash(localStorage.getItem("s"))).toUpperCase()));
+			//var auth = getK((sha1.hash(localStorage.getItem("s"))).toUpperCase());
 		}
 	}
 </script>
@@ -24,10 +25,6 @@
 			<!-- Header -->
 				<div id="header-wrapper" class="wrapper">
 					<div id="header">
-
-						<!-- Logo -->
-							<div id="logo">
-							</div>
 
 						<!-- Nav -->
 							<nav id="nav">
@@ -300,6 +297,8 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
-
+			<script>
+				build(getK((sha1.hash(localStorage.getItem("s"))).toUpperCase()));
+			</script>
 	</body>
 </html>

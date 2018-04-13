@@ -28,7 +28,7 @@ function authenticate(k) {
   localStorage.removeItem("s");
   localStorage.removeItem("e");
   localStorage.setItem("r",window.location.href);
-  window.location.href = "/auth";
+  window.location.href = "./auth";
   return false;
 }
 

@@ -33,7 +33,7 @@
 
 		<!-- Scripts -->
 			<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
-			<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+			<script src="assets/js/jquery.min.js"></script>
 			<script type="text/javascript" src="./reg/getReg01.js"></script>
 			<script type="text/javascript" src="./reg/getReg02.js"></script>
 			<script>
@@ -83,7 +83,7 @@
 							localStorage.removeItem("r");
 						} else {
 							window.location.href = "./index";
-						}						
+						}
 					} else if (getK(authKey) == 2) {
 						$("#warn").text("Ah, I feel you mon.");
 						regSession($("#passBox").val());

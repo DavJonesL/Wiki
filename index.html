@@ -1,3 +1,14 @@
+<!DOCTYPE HTML>
+<script type="text/javascript" src="./reg/getReg01.js"></script>
+<script type="text/javascript" src="./reg/getReg02.js"></script>
+<!--<script type="text/javascript" src="./reg/buildLocker.js"></script>-->
+<script>
+	if (validate()) {
+		if (authenticate((sha1.hash(localStorage.getItem("s"))).toUpperCase())) {
+			if (getK((sha1.hash(localStorage.getItem("s"))).toUpperCase()) == 2) {window.location.href = "./404.html"}
+		}
+	}
+</script>
 <html>
 	<head>
 		<title>Davey Jones Locker</title>
@@ -53,10 +64,34 @@
 				</div>
 
 			<!-- Intro -->
-				<div id="intro-wrapper" class="wrapper style1">
+				<div id="footer-wrapper" class="wrapper">
 					<div class="title">The Introduction</div>
 
 					<section id="intro" class="container">
+						<p class="style3"><table class="default">
+							<thead>
+									<tr>
+										<th>Name</th>
+										<th>Age</th>
+										<th>Sex</th>
+										<th>Location</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Dave Gamache</td>
+										<td>26</td>
+										<td>Male</td>
+										<td>San Francisco</td>
+									</tr>
+									<tr>
+										<td>Dwayne Johnson</td>
+										<td>42</td>
+										<td>Male</td>
+										<td>Hayward</td>
+									</tr>
+								</tbody>
+						</table></p>
 						<table class="default">
 							<thead>
 									<tr>
@@ -155,7 +190,7 @@
 									</div>
 								</div>
 								<ul class="actions actions-centered">
-									<li><a href="#" class="button style1 big">Get Started</a></li>
+									<li><a href="#" class="button style3 big">Get Started</a></li>
 									<li><a href="#" class="button style2 big">More Info</a></li>
 								</ul>
 							</section>
