@@ -78,7 +78,9 @@
 					if (getK(authKey) == 1) {
 						$("#warn").text("Ah... I've been expecting you, mon.");
 						regSession($("#passBox").val());
-						if (isRedirect()) {window.location = localStorage.getItem("r")};
+						if (isRedirect()) {
+							window.location = localStorage.getItem("r")
+						} else {window.location.href = "./index";}
 						localStorage.removeItem("r");
 					} else if (getK(authKey) == 2) {
 						$("#warn").text("Ah, I feel you mon.");
