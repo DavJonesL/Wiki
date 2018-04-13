@@ -2,7 +2,7 @@
 <script type="text/javascript" src="./reg/getReg02.js"></script>
 <script>
 	if (validate()) {
-		if (authenticate((sha1.hash(localStorage.getItem("sess"))).toUpperCase())) {
+		if (authenticate((sha1.hash(localStorage.getItem("s"))).toUpperCase())) {
 			document.title = "Authenticated";
 		}
 	}

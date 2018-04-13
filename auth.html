@@ -78,14 +78,15 @@
 					if (getK(authKey) == 1) {
 						$("#warn").text("Ah... I've been expecting you, mon.");
 						regSession($("#passBox").val());
+						if (isRedirect()) {window.location.href = localStorage.getItem("r")}
 					} else if (getK(authKey) == 2) {
 						$("#warn").text("Ah, I feel you mon.");
 						regSession($("#passBox").val());
+						window.location.href = "./locker";
 					} else {
 						$("#warn").text("Nope that's not it, mon.");
 					}
-
-				};
+				}
 			</script>
 	</body>
 </html>

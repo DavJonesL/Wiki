@@ -15,7 +15,8 @@ function validate() {
 	}
   if (document.title != "Login"){
     if (!isLogged()) {
-      window.location.href = "./auth.html";
+      window.location.href = "./auth";
+      localStorage.setItem("r",window.location.href);
       return false;
     }
   }
@@ -23,8 +24,10 @@ function validate() {
 }
 
 function authenticate(k) {
-  if (validLog(k, parseInt(localStorage.getItem("expire")))) {return true}
-  localStorage.clear();
+  if (validLog(k, parseInt(localStorage.getItem("e")))) {return true}
+  localStorage.removeItem("s");
+  localStorage.removeItem("e");
+  localStorage.setItem("r",window.location.href);
   window.location.href = "/auth";
   return false;
 }
@@ -38,15 +41,18 @@ function supportsStorage() {
 }
 
 function isLogged(){
-    return localStorage.getItem("sess") != null;
+    return localStorage.getItem("s") != null;
+}
+
+function isRedirect(){
+    return localStorage.getItem("r") != null;
 }
 
 function validLog(k,d){
-  if (getK(k) > 0 && Date.now() < d) {return true}
-  return false;
+  return (getK(k) > 0 && Date.now() < d);
 }
 
-function regSession(ID){
-  localStorage.setItem("sess",ID);
-  localStorage.setItem("expire",Date.now()+10000);
+function regsion(ID){
+  localStorage.setItem("s",ID);
+  localStorage.setItem("e",Date.now()+28800000);
 }
