@@ -10,7 +10,7 @@ function getK(val){
 
 function validate() {
   if (!supportsStorage()) {
-		window.location.href = "./badconnection.html";
+		window.location.href = "./badconnection";
 		return false;
 	}
   if (document.title != "Login"){
@@ -52,7 +52,7 @@ function validLog(k,d){
   return (getK(k) > 0 && Date.now() < d);
 }
 
-function regsion(ID){
+function regSession(ID){
   localStorage.setItem("s",ID);
   localStorage.setItem("e",Date.now()+28800000);
 }
