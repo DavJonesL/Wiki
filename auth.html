@@ -79,15 +79,21 @@
 						$("#warn").text("Ah... I've been expecting you, mon.");
 						regSession($("#passBox").val());
 						if (isRedirect()) {
-							window.location = localStorage.getItem("r")
-							localStorage.removeItem("r");
+							setTimeout(function (){
+								window.location = localStorage.getItem("r")
+								localStorage.removeItem("r");
+							}, 1000);
 						} else {
-							window.location.href = "./index";
+							setTimeout(function (){
+								window.location.href = "./index";
+							}, 1000);
 						}
 					} else if (getK(authKey) == 2) {
 						$("#warn").text("Ah, I feel you mon.");
 						regSession($("#passBox").val());
-						window.location.href = "./locker";
+						setTimeout(function (){
+							window.location.href = "./locker";
+						}, 1000);									
 					} else {
 						$("#warn").text("Nope that's not it, mon.");
 					}
