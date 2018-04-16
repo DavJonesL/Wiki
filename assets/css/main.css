@@ -1157,30 +1157,34 @@
 	}
 
 		table.default {
-			width: 65%;
+			padding: 12px 15px;
+			width: 80%;
 			position: inherit;
 			margin: 0px auto;
 		}
 
 			table.default tbody tr:nth-child(2n+2) {
-				/* background: #f4f4f4; */
-				color: #fff;
+				background: rgba(0, 0, 0, 0.08);
+				/*color: #fff;*/
 			}
 
 			table.default td {
-				text-align: center;
+				text-align: left;
+				border-top: solid 1px rgba(255, 255, 255, 0.08);
 				padding: 0.5em 1em 0.5em 1em;
 			}
 
 			table.default th {
-				text-align: center;
+				text-align: left;
 				font-weight: 400;
 				padding: 0.5em 1em 0.5em 1em;
+				font-weight: bold;
+				background: rgba(0, 0, 0, 0.08);
 			}
 
 			table.default thead {
-				text-align: center;
-				background: #484d55;
+				text-align: left;
+				/*background: rgba(255, 255, 255, 0.08);*/
 				color: #fff;
 			}
 
@@ -1211,7 +1215,6 @@
 		border: 0;
 		background: #eee;
 		box-shadow: inset 0px 0px 1px 0px #a0a1a7;
-
 		width: 100%;
 		padding: 0.75em 1em 0.75em 1em;
 	}
@@ -1232,6 +1235,7 @@
 
 	form select {
 		line-height: 1em;
+		margin: 0px auto;
 	}
 
 	form textarea {
@@ -1633,7 +1637,7 @@
 		#footer-wrapper form input[type="password"],
 		#footer-wrapper form select,
 		#footer-wrapper form textarea {
-			background: #ccc;
+			background: rgba(0, 0, 0, 0.24);
 			box-shadow: none;
 		}
 
@@ -1642,7 +1646,7 @@
 			#footer-wrapper form input[type="password"]:focus,
 			#footer-wrapper form select:focus,
 			#footer-wrapper form textarea:focus {
-				background: #fff;
+				background: rgba(0, 0, 0, 0.24);
 			}
 
 		#footer-wrapper input[type="button"],
@@ -1746,6 +1750,7 @@
 	}
 
 		#copyright ul {
+			margin: 0px auto;
 			display: inline-block;
 			border-radius: 0.35em;
 			box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.05);
@@ -2174,7 +2179,8 @@
 		/* Copyright */
 
 			#copyright {
-				margin: 6em 0 0 0;
+
+				/*margin: 6em 0 0 0;*/
 			}
 
 				#copyright ul {

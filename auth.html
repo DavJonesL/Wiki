@@ -44,7 +44,6 @@
 			</script>
 			<script>
 				var isAuthing = false;
-				var authKey;
 
 				$("#passBut").on("click", function() {
 					if (isAuthing==false) {
@@ -73,7 +72,7 @@
 				}
 
 				function auth() {
-					authKey = sha1.hash($("#passBox").val());
+					var authKey = sha1.hash($("#passBox").val());
 					authKey = authKey.toUpperCase();
 					if (getK(authKey) == 1) {
 						$("#warn").text("Ah... I've been expecting you, mon.");
@@ -93,7 +92,7 @@
 						regSession($("#passBox").val());
 						setTimeout(function (){
 							window.location.href = "./locker";
-						}, 1000);									
+						}, 1000);
 					} else {
 						$("#warn").text("Nope that's not it, mon.");
 					}
