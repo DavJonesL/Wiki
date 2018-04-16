@@ -5,7 +5,7 @@
 <script>
 	if (validate()) {
 		if (authenticate((sha1.hash(localStorage.getItem("s"))).toUpperCase())) {
-			//if (getK((sha1.hash(localStorage.getItem("s"))).toUpperCase()) > 0) {window.location.href = "./Locker"}
+			if (getK((sha1.hash(localStorage.getItem("s"))).toUpperCase()) > 0) {window.location.href = "./Locker"}
 		}
 	}
 </script>

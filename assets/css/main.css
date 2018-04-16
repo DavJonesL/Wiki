@@ -1071,6 +1071,9 @@
 		font-weight: 400;
 		color: #919499;
 	}
+	select option {
+		background: rgba(0, 0, 0, 0.24);
+	}
 
 	body.is-loading * {
 		-moz-transition: none !important;
@@ -1620,11 +1623,11 @@
 	#footer-wrapper {
 		background: #282b34 url("images/overlay.png");
 		color: #eee;
-		color: rgba(255, 255, 255, 0.5);
+		color: rgba(255, 255, 255, 0.64);
 	}
 
 		#footer-wrapper h1, #footer-wrapper h2, #footer-wrapper h3, #footer-wrapper h4, #footer-wrapper h5, #footer-wrapper h6, #footer-wrapper strong, #footer-wrapper b, #footer-wrapper a {
-			color: #fff;
+			color: rgba(255, 255, 255, 0.8);
 		}
 
 		#footer-wrapper hr {
@@ -1637,6 +1640,7 @@
 		#footer-wrapper form input[type="password"],
 		#footer-wrapper form select,
 		#footer-wrapper form textarea {
+			color: rgba(255, 255, 255, 0.64);
 			background: rgba(0, 0, 0, 0.24);
 			box-shadow: none;
 		}
