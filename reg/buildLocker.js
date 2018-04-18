@@ -106,7 +106,13 @@ function addRow(name, time, location){
 
 function calcReady(difference) {
     if (difference < 0) {
-      return "Ready";
+      difference = Math.abs(difference);
+      var hours = Math.floor(((difference / 1000) / 60) / 60);
+      difference = difference - (((hours*60)*60)*1000);
+      var minutes = Math.floor((difference/1000) / 60);
+      difference = difference - ((minutes*60)*1000);
+      var seconds = Math.floor(difference/1000);
+      return "Ready (" + padN(hours) + ":" + padN(minutes) + ":" + padN(seconds) + "h)";
     } else {
         var hours = Math.floor(((difference / 1000) / 60) / 60);
         difference = difference - (((hours*60)*60)*1000);
