@@ -1,7 +1,6 @@
 function buildPage(){
   document.getElementById("lastUpdateP").innerHTML = "<b>Last Update</b> 17/04/2018";
   document.getElementById("header-wrapper").style.backgroundImage = "url('./images/banner1.jpg')";
-  //document.getElementById("butt01").style.list.style = "none"
   assessRP01();
   loopUpdate();
 }
