@@ -3,7 +3,7 @@
 
 /* Reset */
 
-	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, header1, header2, header3, header4, header5, header6, header7, header8, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 		margin: 0;
 		padding: 0;
 		border: 0;
@@ -1115,8 +1115,9 @@
 	}
 
 	blockquote {
-		border-left: solid 0.5em #ddd;
-		padding: 1em 0 1em 2em;
+		border-left: solid 1px rgba(255, 255, 255, 0.24);
+		padding: 1em 1em 1em 2em;
+		margin: 0px auto;
 		font-style: italic;
 	}
 
@@ -1150,7 +1151,7 @@
 	}
 
 	p, ul, ol, dl, table, blockquote, form {
-		margin-bottom: 2em;
+		margin-bottom: 1em;
 	}
 
 /* Table */
@@ -1322,9 +1323,14 @@
 			margin: 0 2em 2em 0;
 		}
 
+		.image.right {
+			float: right;
+			margin: 0 0em 0 0em;
+		}
+
 		.image.centered {
 			display: block;
-			margin: 0 0 2em 0;
+			margin: 0 0 0em 0;
 		}
 
 			.image.centered img {
@@ -1354,9 +1360,9 @@
 		text-align: center;
 		text-transform: uppercase;
 		font-weight: 700;
-		letter-spacing: 0.25em;
+		letter-spacing: 0.1em;
 		text-decoration: none;
-		border-radius: 0.35em;
+		/*border-radius: 0.35em;*/
 		border: 0;
 		outline: 0;
 		cursor: pointer;
@@ -1629,6 +1635,30 @@
 		#footer-wrapper h1, #footer-wrapper h2, #footer-wrapper h3, #footer-wrapper h4, #footer-wrapper h5, #footer-wrapper h6, #footer-wrapper strong, #footer-wrapper b, #footer-wrapper a {
 			color: rgba(255, 255, 255, 0.8);
 		}
+		#footer-wrapper ul {
+			list-style: disc;
+			margin: 0px auto;
+			padding-left: 0.5em;
+		}
+
+			#footer-wrapper ul li {
+				padding-left: 0.5em;
+			}
+
+			#footer-wrapper ul.alt {
+				list-style: none;
+				padding-left: 0;
+			}
+
+				#footer-wrapper ul.alt li {
+					border-top: solid 1px rgba(210, 215, 217, 0.75);
+					padding: 0.5em 0;
+				}
+
+					#footer-wrapper ul.alt li:first-child {
+						border-top: 0;
+						padding-top: 0;
+					}
 
 		#footer-wrapper hr {
 			border-top-color: #333;
@@ -1650,7 +1680,7 @@
 			#footer-wrapper form input[type="password"]:focus,
 			#footer-wrapper form select:focus,
 			#footer-wrapper form textarea:focus {
-				background: rgba(0, 0, 0, 0.24);
+				background: rgba(0, 0, 0, 0.80);
 			}
 
 		#footer-wrapper input[type="button"],
@@ -1658,8 +1688,10 @@
 		#footer-wrapper input[type="reset"],
 		#footer-wrapper button,
 		#footer-wrapper .button {
+			top:50%;
+    	left:50%;
 			color: #fff;
-			box-shadow: inset 0px 0px 2px 0px rgba(255, 255, 255, 0.5);
+			box-shadow: inset 0px 0px 1px 0px rgba(255, 255, 255, 0.5);
 		}
 
 			#footer-wrapper input[type="button"]:hover,
@@ -1667,8 +1699,10 @@
 			#footer-wrapper input[type="reset"]:hover,
 			#footer-wrapper button:hover,
 			#footer-wrapper .button:hover {
+				top:50%;
+	    	left:50%;
 				color: #fff;
-				box-shadow: inset 0px 0px 2px 0px rgba(255, 255, 255, 0.65);
+				box-shadow: inset 0px 0px 1px 0px rgba(255, 255, 255, 0.65);
 			}
 
 			#footer-wrapper input[type="button"]:active,
@@ -1676,7 +1710,9 @@
 			#footer-wrapper input[type="reset"]:active,
 			#footer-wrapper button:active,
 			#footer-wrapper .button:active {
-				box-shadow: inset 0px 0px 2px 0px rgba(255, 255, 255, 0.75);
+				top:50%;
+	    	left:50%;
+				box-shadow: inset 0px 0px 1px 0px rgba(255, 255, 255, 0.75);
 			}
 
 			#footer-wrapper input[type="button"].style2:active,
@@ -1684,7 +1720,9 @@
 			#footer-wrapper input[type="reset"].style2:active,
 			#footer-wrapper button.style2:active,
 			#footer-wrapper .button.style2:active {
-				box-shadow: inset 0px 0px 2px 0px rgba(255, 255, 255, 0.75);
+				top:50%;
+	    	left:50%;
+				box-shadow: inset 0px 0px 1px 0px rgba(255, 255, 255, 0.75);
 			}
 
 		#footer-wrapper .title {
@@ -1828,7 +1866,7 @@
 			button,
 			.button {
 				padding: 0 2.25em 0 2.25em;
-				font-size: 0.9em;
+				font-size: 0.75em;
 				min-width: 12em;
 				height: 4em;
 				line-height: 4em;
@@ -1863,6 +1901,7 @@
 					}
 
 			ul.actions-centered {
+				list-style: none;
 				text-align: center;
 			}
 
@@ -2039,7 +2078,7 @@
 					}
 
 						#nav > ul > li > ul {
-							display: none;
+							display: inline-block;
 						}
 
 						#nav > ul > li > a, #nav > ul > li > span {

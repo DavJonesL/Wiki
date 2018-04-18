@@ -10,7 +10,7 @@ function buildNav(){
     cButton("Drop1", "#")
   )));
   //More here;
-  
+
   nav.style.display = "block";
 }
 
