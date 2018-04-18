@@ -71,7 +71,7 @@ function populateTable(passedCity) {
   var i;
   for (i = 0; i < rawArray.length; i++) {
     if (passedCity == "All Cities" || rawArray[i].city == passedCity) {
-      if (rawArray[i].time > -16200000 && rawArray[i].time < 86400000) {
+      if (rawArray[i].time > -21600000 && rawArray[i].time < 86400000) {
         addRow(rawArray[i].name, rawArray[i].time, rawArray[i].location);
         statCount++;
       }
