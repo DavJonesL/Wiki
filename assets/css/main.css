@@ -1070,9 +1070,10 @@
 		font-family: 'Source Sans Pro', sans-serif;
 		font-weight: 400;
 		color: #919499;
+		background: rgba(0, 0, 0, 0.90);
 	}
 	select option {
-		background: rgba(0, 0, 0, 0.24);
+		background: rgba(0, 0, 0, 0.90);
 	}
 
 	body.is-loading * {
@@ -1290,7 +1291,7 @@
 		margin-bottom: 0;
 	}
 
-	header.style1 {
+	header.style1, header.style2 {
 		text-align: center;
 	}
 
@@ -1298,7 +1299,11 @@
 			font-weight: 700;
 		}
 
-		header.style1 p {
+		header.style2 h1 {
+			font-weight: 700;
+		}
+
+		header.style1 p, header.style2 p {
 			color: #b1b4b9;
 		}
 
@@ -1629,7 +1634,7 @@
 	#footer-wrapper {
 		background: #282b34 url("images/overlay.png");
 		color: #eee;
-		color: rgba(255, 255, 255, 0.64);
+		color: rgba(255, 255, 255, 0.7);
 	}
 
 		#footer-wrapper h1, #footer-wrapper h2, #footer-wrapper h3, #footer-wrapper h4, #footer-wrapper h5, #footer-wrapper h6, #footer-wrapper strong, #footer-wrapper b, #footer-wrapper a {
@@ -1670,7 +1675,7 @@
 		#footer-wrapper form input[type="password"],
 		#footer-wrapper form select,
 		#footer-wrapper form textarea {
-			color: rgba(255, 255, 255, 0.64);
+			color: rgba(255, 255, 255, 0.7);
 			background: rgba(0, 0, 0, 0.24);
 			box-shadow: none;
 		}
@@ -1680,7 +1685,7 @@
 			#footer-wrapper form input[type="password"]:focus,
 			#footer-wrapper form select:focus,
 			#footer-wrapper form textarea:focus {
-				background: rgba(0, 0, 0, 0.80);
+				background: rgba(0, 0, 0, 0.8);
 			}
 
 		#footer-wrapper input[type="button"],
@@ -1730,7 +1735,11 @@
 			color: #eee;
 		}
 
-		#footer-wrapper header.style1 h2 {
+		#footer-wrapper header.style1 h2, {
+			color: #fff;
+		}
+
+		#footer-wrapper header.style2 h1, {
 			color: #fff;
 		}
 
@@ -1831,27 +1840,40 @@
 		/* Section/Article */
 
 			section, article {
-				margin: 0 0 4em 0;
+				margin: 0 0 2em 0;
 			}
 
 			header.style1 {
-				padding: 3em 0 3em 0;
+				padding: 0.25em 0 0.5em 0;
 			}
 
 				header.style1 h2 {
-					font-size: 2em;
+					font-size: 1.75em;
 					letter-spacing: 0.075em;
-					line-height: 1.5em;
+					line-height: 0.75em;
+				}
+
+				header.style2 h1 {
+					font-size: 1.25em;
+					letter-spacing: 0.075em;
+					line-height: 0.75em;
 				}
 
 				header.style1 p {
 					display: block;
-					margin: 1.15em 0 0 0;
-					font-size: 1.3em;
+					margin: 0.35em 0 0 0;
+					font-size: 1.25em;
 					letter-spacing: 0.075em;
-					line-height: 1.5em;
+					line-height: 1em;
 				}
 
+				header.style2 p {
+					display: block;
+					margin: 0.75em 0 0 0;
+					font-size: 1em;
+					letter-spacing: 0.075em;
+					line-height: 0.5em;
+				}
 		/* Form */
 
 			form label {
@@ -2066,7 +2088,7 @@
 				#nav > ul {
 					display: inline-block;
 
-					box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.32);
+					box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.32);
 					padding: 0 1.5em 0 1.5em;
 					background-color: rgba(0, 0, 0, 0.24);
 				}
@@ -2112,7 +2134,7 @@
 				background-color: rgba(0, 0, 0, 0.32);
 				padding: 1.25em 1em 1.25em 1em;
 
-				box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.32);
+				box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.32);
 				min-width: 12em;
 				text-align: left;
 				margin-top: -1.25em;
@@ -2182,7 +2204,11 @@
 			}
 
 				#features header.style1 {
-					padding-bottom: 5em;
+					padding-bottom: 2.5em;
+				}
+
+				#features header.style2 {
+					padding-bottom: 1em;
 				}
 
 				#features .actions {
@@ -2363,7 +2389,7 @@
 				display: none;
 			}
 
-			header.style1 {
+			header.style1, header.style2 {
 				padding: 0 0 1em 0;
 			}
 
@@ -2373,7 +2399,13 @@
 					line-height: 1.25em;
 				}
 
-				header.style1 p {
+				header.style2 h1 {
+					font-size: 1.25em;
+					letter-spacing: 0.075em;
+					line-height: 0.75em;
+				}
+
+				header.style1 p, header.style2 p {
 					display: block;
 					margin: 0;
 				}
@@ -2709,6 +2741,10 @@
 
 				#content header.style1 {
 					padding-bottom: 2.5em;
+				}
+
+				#content header.style2 {
+					padding-bottom: 1em;
 				}
 
 		/* Footer */
