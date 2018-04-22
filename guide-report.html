@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<script src="./reg/getReg01.js"></script>
+<script src="./reg/getReg02.js"></script>
+
+<html>
+	<head>
+		<title>Report Guide</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body class="homepage">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+			<div id="header-wrapper" class="wrapper">
+				<div id="header">
+					<nav id="nav" style="display: none"></nav>
+				</div>
+			</div>
+
+			<!-- Main -->
+			<div id="footer-wrapper" class="wrapper">
+				<div class="title">A How To On:</div>
+				<div id="main" class="container">
+					<div id="content">
+						<div id="features">
+							<header class="style1">
+								<h2>Character Reports</h2>
+								<p>A.K.A Shot Reports</p>
+							</header>
+							<header class="style2">
+								<p>(<a id="reportToggleDiv01" href='javascript:;' onclick='toggleDiv(this.id,1)'>Hide Content</a>)</p>
+							</header>
+						</div>
+
+					<div id="Div1">
+						<p>A Character/Shot Report is nothing more than a form every player inside the family fills out on a weekly basis and in which they
+							state their current status and progress.
+							These forms are the means by which the managing structure of the family can get a detailed and concrete overview of every one
+							of it's members. Enabling them to create a picture of the family as a whole, with all it's weaknesses and strengths well measured,
+							while at the same time assess every individual as a part of the collective, and steer the direction of their progress in a manner
+							which boosts the qualities and overcomes the flaws of the organization.
+						</p>
+						<p>As such, the scope of information asked for in these is generally related to your current primary skill-bases
+							(Aim, Defense, Vision, Stealth, Physique) with an emphasys on your Aim, and the roles you undertake while inside your crew.
+						</p>
+						<p><strong>Note</strong>: Reports are for the most part a beaurocracy, but a very needed one. They shouldn't ever replace but instead
+							complement the act of managing a family and all the resources it's members bring to the table. By themselves, they don't attest
+							to more than the trustworthiness and engagement of the family members, but if well managed it can provide the means to create a solid
+							and reliant organization. More so in a large-sized one.
+						</p>
+						<p></br></p>
+						<div id="features">
+							<header class="style2">
+								<h1>In-Depth</h1>
+								<p>(<a id="reportToggleDiv02" href='javascript:;' onclick='toggleDiv(this.id,2)'>Hide Content</a>)</p>
+							</header>
+					</div>
+						<div id="Div2">
+							<p><strong>The importance</strong> of timely and accurate reports couldn't ever be understated.
+								The "<i>vagueness</i>" on which MR is founded upon leaves alot of open space for the players to fill in	with interaction and
+								creativity, but which at the same time can create alot of distance between the factual current state of the game, and the one which
+								is merely perceivable and thus very prone to miss-calculation. Precision of assessment then becomes a highly valuable resource.
+							</p>
+							<p>In the game of guesses, a family which doesn't know itself is not yet ready to suppose other families.
+								And even if the reports are not the main tool for a good organization, these are still the front-line of clear and unfiltered
+								interaction between the	upper structure of a family and all of it's membership.
+								So <u>filling out a report that is misleading or untruthful</u> will denote a lack of trust on your behalf towards your family, and this
+								is considered a great offense. One which is easilly perceived and usually leads to big consequences.
+							</p>
+							<p><strong>DO NOTE:</strong> After having explained, in the briefest I am capable of, as to how and why the reports are
+								important. I wouldn't think it would be required to let you know how restricted the access to their results
+								actually is, but for the sake of clear speech and understanding I will.
+								The information given in a report, is not accessible if not for core upper structure members (CLs/HSLs) of the family,
+								and the repository on which	this information is deposited doesn't allow copying from.
+							</p>
+						</div>
+					</div>
+
+						<p></br></p>
+						<section id="intro" class="container"><p><img  src="images/header01.png" alt="" /></p></section>
+
+						<div id="features"><header class="style2"><h1>Step by Step</h1></header></div>
+
+						<form>
+							<div id="copyright">
+								<ul>
+									<li>
+										<select id="currentStep" onchange="changeStep(this.options[this.selectedIndex].value)">
+											<option value="Basic">Basic Information</option>
+											<option value="BGs">BodyGuards</option>
+											<option value="Skills">Skills</option>
+											<option value="Shots">Shot Reporting</option>
+										</select>
+									</li>
+								</ul>
+							</div>
+						</form>
+						<div style="display: none" id="Basic">
+							<p align="justify">
+								In this section you're asked for just the basic information about your character so that the upcoming values you're about to
+								fill in can be identified with... Well, you. Obviously you put your <strong>Name</strong> in this section, and sometimes reports
+								ask for any combination of <strong>Rank</strong>, <strong>Crew</strong>, <strong>District/City</strong>, and pretty much any
+								other value which can be found in your <a href="https://mafiareturns.com/news/uprofile.php?id=0">public profile</a>.
+								These last ones are generally for organization and mapping purposes at a quick glance.
+							</p>
+							<p align="justify">
+								<strong>GMT</strong> may also be asked as an <u>optional</u>. Nobody is really interested in where you live, timezones don't
+								give off that information either, as each one is usually shared with a group of countries that go from the northern to the southern
+								hemisphere of the planet. It's just that it may be better to pair you into a crew/team of players who are closer to your timezone,
+								or even when creating any sort of event/operation, it may help to know which players we're most likely to invite and coordinate
+								with if we know it's in a "healthy" time for them.
+							</p>
+						</div>
+						<div style="display: none" id="BGs">
+							<p align="justify">
+								Here is where you'll tell us about two very important values: Bodyguard <strong>Total</strong> and <strong>Effective</strong>
+								(<i>Equivalent</i>).
+								Which you can find at the bottom of your <a href="https://mafiareturns.com/manage/bgmanagement.php">Bodyguard Management Page</a>.
+								Total is just the sum of all bodyguards you currently have employed, whereas the equivalent is all of your BG's summed Health Points
+								divided by 100 (every 100hp gives you 1 defense point).
+							</p>
+							<p align="justify">
+								These two values are the front-line of a crew's defenses and from time to time, adjustments to these may be made on an individual
+								level in order to attain a desired standard inside the crew. Part of the treasury is generally dedicated to providing the crew with
+								the means to have a good defense across the board.
+							</p>
+						</div>
+						<div style="display: none" id="Skills">
+							<p align="justify">
+								There are four Skills which are usually covered in this place: <strong>Vision</strong> (<i>Street Smarts</i>),
+								<strong>Stealth</strong>, <strong>Defense</strong> and <strong>Physique</strong>. They are the means with which Characters
+								interact with eachother from a purely game-mechanic point of view, and are thus very important when assigning the roles anyone
+								can have while in a crew or operation.
+							</p>
+							<p align="justify">
+								There is more than one way to ascertain your current skill-base values, as there is also more than one way to have one's skills
+								being initially set:<br>
+							</p>
+							<p align="justify">
+								If you started your character on a <strong>Roll</strong>, meaning that you rolled your character's skills to random yet precise
+								values, as opposed to answering a set of questions, then you already have all of them
+								available to you on your <a href="https://mafiareturns.com/manage/profile.php">Profile Management Page</a>.
+								Scroll down until you find your "<i>Initial Roll</i>", and to those, add the
+								<a href="https://mafiareturns.com/manage/hustle_spend.php">Hustle</a> increments you've made to each skill and you'll have
+								your current skill-base.<br>
+							</p>
+							<p align="justify">
+								If you started by answering a <strong>Set of Questions</strong>, you'll also find those on your Profile Page,
+								under "<i>Startup RP Answers</i>". Certain sets are equivalent to certain 100% specializations in the following manner:<br>
+							</p>
+							<p style="text-align: center">
+								<strong>14534353</strong> - 100% Vision<br>
+								<strong>13421431</strong> - 100% Stealth<br>
+								<strong>32412114</strong> - 100% Aim<br>
+								<strong>11131141</strong> - 100% Defense<br>
+								<br>
+							</p>
+							<p align="justify">
+								<u>You only have to input your Hustles on the report if you started on either of the 4 previews Answer Sets.</u><br>
+								If you started on a different Answer Set however, consider talking with your CL to ascertain your current skill-base for now.
+							</p>
+						</div>
+						<div style="display: none" id="Shots">
+							<p align="justify">
+								Due to it's critical nature, your Aim (Wack) skill is not directly asked for in the report. Instead, only the values which are
+								required for calculating the skill are to be input, and from those the result is ascertained and stored internally.
+								These consist on the total of <strong>Player Bodyguard Damages</strong>,
+								<strong>NPC Bodyguard Damages</strong>, <strong>Character Kills</strong>, <strong>Shooting Ranges</strong>, <strong>Hustles</strong>,
+								<strong>Holyday Bonuses</strong> or pretty much any other gun-skill incrementing activity you have made on your character.
+							</p>
+							<p align="justify">
+								All of these values can be found in your <a href="https://mafiareturns.com/news/personals.php">Personals Page</a>. But it is
+								a good practice to keep track of them on a seperate file (usually on an online platform like a GoogleDrive Sheet or a OneDrive
+								Excel Workbook).
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Scripts -->
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.dropotron.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/skel-viewport.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+		<script src="assets/js/main.js"></script>
+		<script src="./reg/buildNav.js"></script>
+		<script src="./reg/buildGuide01.js"></script>
+		<script src="./reg/buildToggles.js"></script>
+		<script>
+			if (isLogged()){
+				if (validLog(sha1.hash(localStorage.getItem("s")).toUpperCase())) {
+					buildNav(getK((sha1.hash(localStorage.getItem("s"))).toUpperCase()));
+				}
+			} else {
+				buildNav(getK("a"));
+			}
+			buildPage();
+			buildToggles("reportGuide")
+		</script>
+	</body>
+</html>

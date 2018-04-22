@@ -1,17 +1,32 @@
-function buildNav(){
-  nav = document.getElementById("nav");
-  navBody = cBody();
-  nav.appendChild(navBody);
+function buildNav(logType){
+  if (logType != 2){
+    nav = document.getElementById("nav");
+    navBody = cBody();
+    nav.appendChild(navBody);
 
-  navBody.appendChild(cButton("Home","./"));
-  navBody.appendChild(cDrop(cButton("Drop", "#"), new Array(
-    cButton("Drop3", "#"),
-    cButton("Drop2", "#"),
-    cButton("Drop1", "#")
-  )));
-  //More here;
+    if (logType == 0){
+      var loginButt = cButton("Login","./auth.html")
+      window.addEventListener("click", loginButtClick);
+      navBody.appendChild(loginButt);
+    } else {
+      navBody.appendChild(cButton("Locker","./locker.html"));
+      navBody.appendChild(cDrop(cButton("How To's", "#"), new Array(
+        cButton("Report", "./guide-report.html"))));
+    }
 
-  nav.style.display = "block";
+  //  navBody.appendChild(cDrop(cButton("Drop", "#"), new Array(
+  //    cButton("Drop3", "#"),
+  //    cButton("Drop2", "#"),
+  //    cButton("Drop1", "#")
+  //  )));
+  //  More here;
+
+    nav.style.display = "block";
+  }
+}
+
+function loginButtClick(){
+  localStorage.setItem("r",window.location.href);
 }
 
 function cBody(){

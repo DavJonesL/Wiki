@@ -4,7 +4,6 @@
 <script>
 	if (validate()) {
 		if (authenticate((sha1.hash(localStorage.getItem("s"))).toUpperCase())) {
-			//window.attachEvent('onload', build(getK((sha1.hash(localStorage.getItem("s"))).toUpperCase())));
 		}
 	}
 </script>
@@ -61,7 +60,7 @@
 							</i></p></div>
 							<div class="row">
 								<div class="5u 10u(mobile)">
-									<img  id="portrait01" class="image right" src="images/portrait01.png" alt="" />
+									<img class="image right" src="images/portrait01.png" alt="" />
 								</div>
 								<div class="7u 14u(mobile)">
 									<p><br></p>
@@ -129,7 +128,7 @@
 		<script src="./reg/buildLocker.js"></script>
 		<script>
 			if (getK((sha1.hash(localStorage.getItem("s"))).toUpperCase()) == 1) {
-				//buildNav();
+				buildNav(getK((sha1.hash(localStorage.getItem("s"))).toUpperCase()));
 			}
 			if (getK((sha1.hash(localStorage.getItem("s"))).toUpperCase()) > 0) {
 				buildPage();

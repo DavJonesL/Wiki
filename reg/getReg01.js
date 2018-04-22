@@ -24,7 +24,7 @@ function validate() {
 }
 
 function authenticate(k) {
-  if (validLog(k, parseInt(localStorage.getItem("e")))) {return true}
+  if (validLog(k)) {return true}
   localStorage.removeItem("s");
   localStorage.removeItem("e");
   localStorage.setItem("r",window.location.href);
@@ -41,15 +41,15 @@ function supportsStorage() {
 }
 
 function isLogged(){
-    return localStorage.getItem("s") != null;
+    return (localStorage.getItem("s") != null && localStorage.getItem("e") != null);
 }
 
 function isRedirect(){
     return localStorage.getItem("r") != null;
 }
 
-function validLog(k,d){
-  return (getK(k) > 0 && Date.now() < d);
+function validLog(k){
+  return (getK(k) > 0 && Date.now() < parseInt(localStorage.getItem("e")));
 }
 
 function regSession(ID){
