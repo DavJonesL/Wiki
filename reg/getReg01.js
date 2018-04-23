@@ -54,5 +54,5 @@ function validLog(k){
 
 function regSession(ID){
   localStorage.setItem("s",ID);
-  localStorage.setItem("e",Date.now()+28800000);
+  localStorage.setItem("e",Date.now()+43200000);
 }
