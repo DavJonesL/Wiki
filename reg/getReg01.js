@@ -1,5 +1,5 @@
 function getK(val){
-  if (val == "25E85E7D6E8CF97A2E8EA90A04F0E297A54ECEAB") {
+  if (val == "EF560A4DB5BCB7D5B0BF4B3026B5B59895240367") {
     return 1;
   } else if (val == "1911FDD636BAF809B67F14E47C1D6F7F24BC9FD9") {
     return 2;
