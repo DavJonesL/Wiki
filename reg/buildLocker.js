@@ -144,14 +144,6 @@ function getUTC(now) {
 function popAllCharsArray() {
   var rawArray = [];
   <!-- Start Here -->
-		rawArray.push({name:"Carlow", time: new Date(2018,5,26,12,48,0,0).getTime() - getUTC(new Date()), location:"The Loop",  city: "CH"});
-		rawArray.push({name:"Jessie_Braue", time: new Date(2018,5,26,12,55,0,0).getTime() - getUTC(new Date()), location:"Pioneer Square",  city: "SEA"});
-		rawArray.push({name:"Lynna", time: new Date(2018,5,26,13,3,0,0).getTime() - getUTC(new Date()), location:"Manhattan",  city: "NY"});
-		rawArray.push({name:"VilmaGooding", time: new Date(2018,5,26,13,36,0,0).getTime() - getUTC(new Date()), location:"The Loop",  city: "CH"});
-		rawArray.push({name:"LeeThompkins", time: new Date(2018,5,26,13,45,0,0).getTime() - getUTC(new Date()), location:"The Strip",  city: "LV"});
-		rawArray.push({name:"PlaceOfTruth", time: new Date(2018,5,26,13,57,0,0).getTime() - getUTC(new Date()), location:"Downtown LA",  city: "LA"});
-		rawArray.push({name:"Sauce_Walka", time: new Date(2018,5,26,14,56,0,0).getTime() - getUTC(new Date()), location:"The Loop",  city: "CH"});
-		rawArray.push({name:"Donaldcrittenden", time: new Date(2018,5,26,15,14,0,0).getTime() - getUTC(new Date()), location:"The Strip",  city: "LV"});
 		rawArray.push({name:"Kenneth_Jernigan", time: new Date(2018,5,26,16,29,0,0).getTime() - getUTC(new Date()), location:"Ballard",  city: "SEA"});
 		rawArray.push({name:"Lyman_sampsell", time: new Date(2018,5,26,16,46,0,0).getTime() - getUTC(new Date()), location:"Downtown",  city: "DT"});
 		rawArray.push({name:"Ricky_Sallaz", time: new Date(2018,5,26,17,8,0,0).getTime() - getUTC(new Date()), location:"Brooklyn",  city: "NY"});
@@ -189,8 +181,8 @@ function popAllCharsArray() {
 		rawArray.push({name:"JoniOliver", time: new Date(2018,5,27,4,53,0,0).getTime() - getUTC(new Date()), location:"Pioneer Square",  city: "SEA"});
 		rawArray.push({name:"Terry_Bablak", time: new Date(2018,5,27,5,10,0,0).getTime() - getUTC(new Date()), location:"South Side",  city: "CH"});
 		rawArray.push({name:"MarcelineHinson", time: new Date(2018,5,27,5,26,0,0).getTime() - getUTC(new Date()), location:"Manhattan",  city: "NY"});
-		rawArray.push({name:"Nicholas_Devore", time: new Date(2018,5,27,5,56,0,0).getTime() - getUTC(new Date()), location:"Pioneer Square",  city: "SEA"});
 		rawArray.push({name:"Youngstallion", time: new Date(2018,5,27,5,56,0,0).getTime() - getUTC(new Date()), location:"The Loop",  city: "CH"});
+		rawArray.push({name:"Nicholas_Devore", time: new Date(2018,5,27,5,56,0,0).getTime() - getUTC(new Date()), location:"Pioneer Square",  city: "SEA"});
 		rawArray.push({name:"_Melvinprager", time: new Date(2018,5,27,6,6,0,0).getTime() - getUTC(new Date()), location:"Old City District",  city: "PH"});
 		rawArray.push({name:"Josef_Mintos", time: new Date(2018,5,27,6,15,0,0).getTime() - getUTC(new Date()), location:"Summerlin",  city: "LV"});
 		rawArray.push({name:"JohnnyBarzini", time: new Date(2018,5,27,6,16,0,0).getTime() - getUTC(new Date()), location:"The Loop",  city: "CH"});
@@ -265,9 +257,9 @@ function popAllCharsArray() {
 		rawArray.push({name:"RonaldSavela", time: new Date(2018,5,28,20,34,0,0).getTime() - getUTC(new Date()), location:"Bella Vista",  city: "PH"});
 		rawArray.push({name:"Arthur_Engberson", time: new Date(2018,5,28,20,39,0,0).getTime() - getUTC(new Date()), location:"Downtown LA",  city: "LA"});
 		rawArray.push({name:"Patty_Clevette", time: new Date(2018,5,28,21,3,0,0).getTime() - getUTC(new Date()), location:"Pasadena",  city: "LA"});
-		rawArray.push({name:"NormanMatas", time: new Date(2018,5,28,21,51,0,0).getTime() - getUTC(new Date()), location:"Downtown",  city: "DT"});
-		rawArray.push({name:"Jacqueline", time: new Date(2018,5,28,21,51,0,0).getTime() - getUTC(new Date()), location:"Corktown",  city: "DT"});
 		rawArray.push({name:"anthonysmith", time: new Date(2018,5,28,21,51,0,0).getTime() - getUTC(new Date()), location:"Downtown",  city: "DT"});
+		rawArray.push({name:"Jacqueline", time: new Date(2018,5,28,21,51,0,0).getTime() - getUTC(new Date()), location:"Corktown",  city: "DT"});
+		rawArray.push({name:"NormanMatas", time: new Date(2018,5,28,21,51,0,0).getTime() - getUTC(new Date()), location:"Downtown",  city: "DT"});
 		rawArray.push({name:"Nita_Wesemann", time: new Date(2018,5,28,21,52,0,0).getTime() - getUTC(new Date()), location:"Corktown",  city: "DT"});
 		rawArray.push({name:"Jin_Byrom", time: new Date(2018,5,28,22,6,0,0).getTime() - getUTC(new Date()), location:"Old City District",  city: "PH"});
 		rawArray.push({name:"Erick_Ellis", time: new Date(2018,5,28,22,18,0,0).getTime() - getUTC(new Date()), location:"South Side",  city: "CH"});
@@ -441,6 +433,11 @@ function popAllCharsArray() {
 		rawArray.push({name:"BennyTest", time: new Date(2018,6,2,17,18,0,0).getTime() - getUTC(new Date()), location:"South Side",  city: "CH"});
 		rawArray.push({name:"Jimmy_Lacovara", time: new Date(2018,6,2,17,42,0,0).getTime() - getUTC(new Date()), location:"Summerlin",  city: "LV"});
 		rawArray.push({name:"Elvira_Zwilling", time: new Date(2018,6,2,20,33,0,0).getTime() - getUTC(new Date()), location:"South Side",  city: "CH"});
+		rawArray.push({name:"Rene_Fairfax", time: new Date(2018,6,2,23,47,0,0).getTime() - getUTC(new Date()), location:"The Strip",  city: "LV"});
+		rawArray.push({name:"shandicarey", time: new Date(2018,6,3,1,22,0,0).getTime() - getUTC(new Date()), location:"The Strip",  city: "LV"});
+		rawArray.push({name:"IvanPage", time: new Date(2018,6,3,4,20,0,0).getTime() - getUTC(new Date()), location:"Summerlin",  city: "LV"});
+		rawArray.push({name:"Sassy", time: new Date(2018,6,3,4,35,0,0).getTime() - getUTC(new Date()), location:"The Strip",  city: "LV"});
+		rawArray.push({name:"Natalizio", time: new Date(2018,6,3,8,34,0,0).getTime() - getUTC(new Date()), location:"Summerlin",  city: "LV"});
 		rawArray.push({name:"Charon", time: new Date(2018,6,3,9,11,0,0).getTime() - getUTC(new Date()), location:"The Loop",  city: "CH"});
 		rawArray.push({name:"ErnestineBreashears", time: new Date(2018,6,3,15,8,0,0).getTime() - getUTC(new Date()), location:"South Side",  city: "CH"});
 		rawArray.push({name:"Adrian_Hemby", time: new Date(2018,6,3,16,48,0,0).getTime() - getUTC(new Date()), location:"South Side",  city: "CH"});
